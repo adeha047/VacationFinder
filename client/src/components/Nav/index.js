@@ -5,32 +5,18 @@ import LoginForm from "../LoginForm";
 import './style.scss';
 
 function Nav() {
-  const [loginExpanded, setLoginExpanded] = useState(false);
-  const {email, loggedIn} = useContext(UserContext);
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a className="navbar-brand" href="/">
-        React Reading List
-      </a>
-      { (() => {
-        if(loggedIn){
-          return <p className="logged-in-text">Logged in as {email} <Link to="/logout" onClick={ () => setLoginExpanded(false)}>Logout</Link> </p>;
-        }
-        else{
-          if(!loginExpanded){
-            return <button onClick={ () => setLoginExpanded(true) }>Login</button>;
-          }
-          else{
-            return (
-              <Fragment>
-                <LoginForm className="top-menu-login"/>
-                <button onClick={ () => setLoginExpanded(false) }>X</button>
-              </Fragment>
-            )
-          } 
-        }
-      })()}
-      
+    
+    <nav>
+      <div>
+        <h1>VACATION FINDER</h1>
+      </div>  
+      <ul className="navlinks">
+          <li className = "link"><a href='#'>HOME</a></li>
+          <li className = "link"><a href='#'>ABOUT</a></li>
+          <li className = "link"><a href='#'>ACCOUNT</a></li>
+          <li className = "link"><a href='#'>QUESTIONAIRE</a></li>
+        </ul>
     </nav>
   );
 }

@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body{
+    background:url("./images/vacation.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h2{
+  text-align: center;
+}
