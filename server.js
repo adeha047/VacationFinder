@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 require('dotenv').config()
->>>>>>> origin/main
 const express = require("express");
 
 const mongoose = require("mongoose");
@@ -32,11 +29,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-<<<<<<< HEAD
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/proj3");
-=======
-mongoose.connect(process.env.MONGODB_URI );
->>>>>>> origin/main
 
 // Start the API server
 app.listen(PORT, function() {
