@@ -5,7 +5,7 @@ const flightsController = require("../../controllers/flightsController.js");
 router.route("/")
   .get(function (req, res) {
       flightsController.getflights().then(response => {
-          res.send(response.data)
+          res.send(response.data);
       })
 
   })
