@@ -1,11 +1,19 @@
+<<<<<<< HEAD
+=======
+require('dotenv').config()
+>>>>>>> origin/main
 const mongoose = require("mongoose");
 const db = require("../models");
 
 // This file empties the Books collection and inserts the books below
 
 mongoose.connect(
+<<<<<<< HEAD
   process.env.MONGODB_URI ||
   "mongodb://localhost/reactreadinglist"
+=======
+  process.env.MONGODB_URI
+>>>>>>> origin/main
 );
 
 const bookSeed = [
