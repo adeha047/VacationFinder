@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav";
@@ -11,12 +11,17 @@ import Logout from "./pages/Logout";
 
 function App() {
   return (
-  <Router>
-   <Nav/>
-   {/* <Route path = "/" component={Home}/> */}
-   <Route path = "/Home" component={Home}/>
-   <Route path = "/About" component={About}/>
-   </Router>
+    <Router>
+      <Nav />
+      <Switch>
+        <Route exact path={["/", "/home"]}>
+          <Home />
+        </Route>
+        <Route exact path="/about">
+          <About />
+        </Route>
+      </Switch>
+    </Router>
   )
 }
 
