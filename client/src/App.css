@@ -8,8 +8,22 @@ body{
     background:url("./images/vacation.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: Gill Sans Extrabold, sans-serif;
 }
 
 h2{
   text-align: center;
+}
+
+/* home page */
+img{
+  display:block;
+  margin:0 auto;
+  width: 30%;
+}
+
+/* type wrting */
+.home{
+  text-align: center;
+  font-size: 25px;
 }
