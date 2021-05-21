@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import UserContext from "./utils/UserContext";
 import SignUp from "./pages/SignUp";
 import Logout from "./pages/Logout";
+import FlightsTest from "./components/flightsTest";
 
 function App() {
   const [email, setEmail] = useState("");
@@ -32,6 +33,9 @@ function App() {
             </Route>
             <Route exact path="/logout">
               <Logout />
+            </Route>
+            <Route exact path="/flightsTest">
+              <FlightsTest />
             </Route>
             <Route>
               <NoMatch />
