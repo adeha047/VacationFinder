@@ -15,8 +15,8 @@ function Nav() {
       <ul className="navlinks">
           <li><Link to = {"/home"}>HOME</Link></li>
           <li><Link to = {"/about"}>ABOUT</Link></li>
-          <li className = "link"><a href='#'>ACCOUNT</a></li>
-          <li className = "link"><a href='#'>QUESTIONAIRE</a></li>
+          <li><Link to = {"/login"}>ACCOUNT</Link></li>
+          <li><Link to = {"/questionaire"}>QUESTIONAIRE</Link></li>
         </ul>
     </nav>
   );
