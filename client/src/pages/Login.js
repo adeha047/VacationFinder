@@ -27,7 +27,7 @@ function Login() {
         setValues({... values, email: event.target.value})
     }
     const handlePasswordInput = (event) => {
-        setValues({... values, firstName: event.target.value})
+        setValues({... values, password: event.target.value})
     }
 
     const handleSubmit = (event) => {
@@ -71,7 +71,7 @@ function Login() {
                 />
                 {/* error message for not typing an email */}
                 {submitted && !values.email ? <span>Please Enter An Email</span> : null }
-                {/* <input
+                 <input
                     onChange = {handlePasswordInput}
                     className = "form-field"
                     value = {values.password}
@@ -79,7 +79,7 @@ function Login() {
                     name = "password"
                 />
                 {/* error message for not typing a password */}
-                {/* {submitted && !values.password ? <span>Please Enter A Password</span> : null} */} 
+                {submitted && !values.password ? <span>Please Enter A Password</span> : null}  
 
                 <button
                     className= "form-field"
