@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import LoginForm from '../components/LoginForm';
 import { Redirect } from 'react-router-dom';
 import UserContext from '../utils/UserContext';

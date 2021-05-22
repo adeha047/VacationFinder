@@ -23,8 +23,16 @@ img{
 }
 
 /* type wrting */
+/* em for spacing, rem for font size */
 .home{
   text-align: center;
-  font-size: 25px;
+  font-size: 3rem;
+  color:#D4F4FF;
+  font-weight:bold;
+  margin-top:1em;
+  margin-bottom:1em;
+  text-shadow:2px 2px 2px #000;
 }
+
+
 
