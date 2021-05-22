@@ -48,11 +48,11 @@ db.Interests
 
   const locationsSeed = [
     {
-      location: "Miami, Florida",
+      location: "Miami",
       interest_id: 1
     },
     {
-      location: "Huntington Beach, California",
+      location: "Huntington Beach",
       interest_id: 1
     },
     {
@@ -60,71 +60,71 @@ db.Interests
       interest_id: 1
     },
     {
-      location: "Maui, Hawaii",
+      location: "Maui",
       interest_id: 1
     },
     {
-      location: "Dublin, Ireland",
+      location: "Dublin",
       interest_id: 2
     },
     {
-      location: "Amsterdam, Netherlands",
+      location: "Amsterdam",
       interest_id: 2
     },
     {
-      location: "Portland, Oregon",
+      location: "Portland",
       interest_id: 2
     },
     {
-      location: "Brussles, Belgium",
+      location: "Brussels",
       interest_id: 2
     },
     {
-      location: "Glacier National Park, Montana",
+      location: "Kilimanjaro",
       interest_id: 3
     },
     {
-      location: "Machu Picchu, Peru",
+      location: "Kona",
       interest_id: 3
     },
     {
-      location: "Grand Canyon, Arizona",
+      location: "Grand Canyon",
       interest_id: 3
     },
     {
-      location: "Yosemite National Park, California",
+      location: "Yosemite",
       interest_id: 3
     },
     {
-      location: "Whistler, Canada",
+      location: "Whistler",
       interest_id: 4
     },
     {
-      location: "Aspen, Colorado",
+      location: "Aspen",
       interest_id: 4
     },
     {
-      location: "Park City, Utah",
+      location: "Park City",
       interest_id: 4
     },
     {
-      location: "Lake Tahoe, Nevada",
+      location: "Lake Tahoe",
       interest_id: 4
     },
     {
-      location: "New York City, New York",
+      location: "New York City",
       interest_id: 5
     },
     {
-      location: "Paris, France",
+      location: "Paris",
       interest_id: 5
     },
     {
-      location: "Milan, Italy",
+      location: "Milan",
       interest_id: 5
     },
     {
-      location: "London, United Kingdom",
+      location: "London",
       interest_id: 5
     },
   ];
