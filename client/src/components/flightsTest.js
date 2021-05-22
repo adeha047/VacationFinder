@@ -16,14 +16,18 @@ function getFlight(place) {
   };
   
   return axios.request(options).then(function (response) {
-      console.log(response.data.Places);
+      
+      console.log(response.data.Places[1].PlaceName);
+      console.log(response.data.Places[2].PlaceName);
+      console.log(response.data.Places[3].PlaceName);
 
-   return response.data
+
+//    return response.data
   }).catch(function (error) {
     return error;
   });
 }
-getFlight("Brussels")
+getFlight("New York")
   
     return (
         <div> </div>
