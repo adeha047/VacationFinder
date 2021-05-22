@@ -2,7 +2,7 @@ const router = require("express").Router();
 const bookRoutes = require("./books");
 const userRoutes = require("./user");
 const flightRoutes = require("./flights")
-const airportRoutes = require("./airports")
+const interestRoutes = require("./interests")
 
 // Book routes /api/books*
 router.use("/books", bookRoutes);
@@ -11,6 +11,6 @@ router.use("/user", userRoutes);
 
 router.use("/flights", flightRoutes);
 
-router.use("/airports", airportRoutes);
+router.use("/interests", interestRoutes);
 
 module.exports = router;
