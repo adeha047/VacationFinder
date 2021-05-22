@@ -1,7 +1,31 @@
-.logged-in-text{
-    font-size:10px;
-    a {
-        font-size:14px;
-        color: white;
-    }
-}
+/* navbar  */
+nav{
+    display:flex;
+    /* giving space */
+    justify-content: space-around;
+    min-height: 8vh;
+    // position:absolute;
+    width: 100%;
+    align-items: center;
+  }
+  
+  /* links */
+  a{
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+  }
+  /* hover effect on the links */
+  a:hover{
+    color:lavender;
+  }
+  
+  .navlinks{
+    display: flex;
+    /* gets rid of the dots */
+    list-style: none;
+    /* giving space between the nav links */
+    justify-content: space-around;
+    width:30%;
+  }
+  
