@@ -14,93 +14,90 @@ mongoose.connect(
   const locationSeed = [
     {
       location: "Miami",
-      interest_id: 1
+      interestID: 1
     },
     {
       location: "Huntington Beach",
-      interest_id: 1
+      interestID: 1
     },
     {
       location: "Bahamas",
-      interest_id: 1
+      interestID: 1
     },
     {
       location: "Maui",
-      interest_id: 1
+      interestID: 1
     },
     {
       location: "Dublin",
-      interest_id: 2
+      interestID: 2
     },
     {
       location: "Amsterdam",
-      interest_id: 2
+      interestID: 2
     },
     {
       location: "Portland",
-      interest_id: 2
+      interestID: 2
     },
     {
       location: "Brussels",
-      interest_id: 2
+      interestID: 2
     },
     {
       location: "Kilimanjaro",
-      interest_id: 3
+      interestID: 3
     },
     {
       location: "Kona",
-      interest_id: 3
+      interestID: 3
     },
     {
       location: "Grand Canyon",
-      interest_id: 3
+      interestID: 3
     },
     {
       location: "Yosemite",
-      interest_id: 3
+      interestID: 3
     },
     {
       location: "Whistler",
-      interest_id: 4
+      interestID: 4
     },
     {
       location: "Aspen",
-      interest_id: 4
+      interestID: 4
     },
     {
       location: "Park City",
-      interest_id: 4
+      interestID: 4
     },
     {
       location: "Lake Tahoe",
-      interest_id: 4
+      interestID: 4
     },
     {
       location: "New York City",
-      interest_id: 5
+      interestID: 5
     },
     {
       location: "Paris",
-      interest_id: 5
+      interestID: 5
     },
     {
       location: "Milan",
-      interest_id: 5
+      interestID: 5
     },
     {
       location: "London",
-      interest_id: 5
+      interestID: 5
     },
   ];
   
-  db.Location
-    .then(() => db.Location.collection.insertMany(locationsSeed))
-    .then(data => {
-      console.log(data.result.n + " records inserted!");
-      process.exit(0);
-    })
-    .catch(err => {
-      console.error(err);
-      process.exit(1);
-    });
+  db.Location.insertMany(locationSeed, (err, docs) => {
+    if(err) console.error(err);
+    console.log("records were added");
+    console.log("Here's the proof!");
+    console.log("================");
+    console.log(docs);
+  })
