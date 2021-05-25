@@ -5,7 +5,9 @@ const flightsController = require("../../controllers/airportsController.js");
 router.route("/")
   .get(function (req, res) {
       flightsController.getairports().then(response => {
-          res.send(response.data);
+        console.log(response)
+      //     res.json(response);
+
       })
 
   })

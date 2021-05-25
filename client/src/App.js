@@ -8,22 +8,39 @@ import Login from "./pages/Login";
 import UserContext from "./utils/UserContext";
 import SignUp from "./pages/SignUp";
 import Logout from "./pages/Logout";
+import FlightsTest from "./components/flightsTest";
 
 function App() {
   return (
     <Router>
-      <Nav />
-      <Switch>
-        <Route exact path={["/", "/home"]}>
-          <Home />
-        </Route>
-        <Route exact path="/about">
-          <About />
-        </Route>
-        <Route exact path="/login">
-          <Login/>
-        </Route>
-      </Switch>
+      <UserContext.Provider value={{email, setEmail, loggedIn, setLoggedIn}}>
+        <div>
+          <Nav />
+          <Switch>
+            <Route exact path={["/", "/books"]}>
+              <Books />
+            </Route>
+            <Route exact path="/books/:bookid">
+              <Detail />
+            </Route>
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            <Route exact path="/signup">
+              <SignUp />
+            </Route>
+            <Route exact path="/logout">
+              <Logout />
+            </Route>
+            <Route exact path="/flightsTest">
+              <FlightsTest />
+            </Route>
+            <Route>
+              <NoMatch />
+            </Route>
+          </Switch>
+        </div>
+      </UserContext.Provider>
     </Router>
   )
 }
