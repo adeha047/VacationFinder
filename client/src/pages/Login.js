@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import LoginForm from '../components/LoginForm';
-import { Redirect } from 'react-router-dom';
-import UserContext from '../utils/UserContext';
 
 function Login() {
     const [values, setValues] = useState({
