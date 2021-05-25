@@ -5,11 +5,12 @@ import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Login from "./pages/Login";
-import Questionaire from "./pages/Questionaire"
+import Questionaire from "./pages/Questionaire"; 
+import Location from "./pages/Location";
 import UserContext from "./utils/UserContext";
 import SignUp from "./pages/SignUp";
 import Logout from "./pages/Logout";
-import FlightsTest from "./components/flightsTest";
+
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
         </Route>
         <Route exact path="/questionaire">
           <Questionaire/>
+        </Route>
+        <Route exact path="/locations">
+          <Location/>
         </Route>
       </Switch>
     </Router>

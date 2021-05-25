@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 // http://localhost:3001/api/interests
 function Questionaire() {
     const [interests, setInterests] = useState([]);
+    function handleclick (i) {
+        console.log(i);
+        window.location.replace(`/locations?id=${i.interestID}`)
+    }
     useEffect(() => {
         async function fetchInterests() {
             const request = await fetch("http://localhost:3001/api/interests", {
@@ -14,6 +18,7 @@ function Questionaire() {
                 //     console.log(data)
                 // })
                 .catch(err => err);
+            console.log(request)
 
             setInterests(request.data);
             console.log(request)
@@ -30,7 +35,7 @@ function Questionaire() {
                 {interests.map((i) => (
                     <li key={i.interestID}>
                         {i.interest}
-                        <button type="button" className="btn btn-primary" style={{ marginRight: "25px" }} onClick={() => this.handleclick(i)}>Select</button>
+                        <button type="button" className="btn btn-primary" style={{ marginRight: "25px" }} onClick={() => handleclick(i)}>Select</button>
                     </li>
                 ))}
             </ul>

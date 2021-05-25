@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const {Interest} = require("../../models")
+const {Location} = require("../../models")
 // Matches with "/api/locations"
 router.get("/", async (req, res) => {
     try {
