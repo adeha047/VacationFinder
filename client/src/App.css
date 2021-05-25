@@ -13,6 +13,8 @@ body{
 
 h2{
   text-align: center;
+  margin-bottom:1em;
+  margin-top:1em;
 }
 
 /* home page */
@@ -34,5 +36,48 @@ img{
   text-shadow:2px 2px 2px #000;
 }
 
+/* login page */
+.success{
+  text-align: center;
+  margin-bottom:1em;
+  font-size: 1.5rem;
+}
+span{
+  text-align: center;
+}
+
+.form-container{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  display:block;
+}
+
+
+
+/* about page */
+h2{
+  text-align: center;
+  margin-top:40px;
+  font-size: 3rem;
+  color:#D4F4FF;
+}
+
+/* About Card CSS */
+.Card{
+  width:30%;
+  height:550px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 1p 10px 1px black;
+  margin:0 auto;
+  background:#9ABEE3;
+}
+
+p{
+  font-size: 20px;
+  text-align: center;
+  color:#393F54;
+}
 
 
