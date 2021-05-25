@@ -1,5 +1,9 @@
 require('dotenv').config()
 const express = require("express");
+var cors = require('cors')
+
+
+
 
 const mongoose = require("mongoose");
 const routes = require("./routes");
@@ -13,7 +17,7 @@ const passport = require("./config/passport");
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+app.use(cors())
 // We need to use sessions to keep track of our user's login status
 app.use(
   session({ secret: "the secret that always changes", resave: true, saveUninitialized: true })
@@ -27,9 +31,11 @@ if (process.env.NODE_ENV === "production") {
 }
 // Add routes, both API and view
 app.use(routes);
-
+console.log(process.env.MONGODB_URI)
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI );
+mongoose.connect(process.env.MONGODB_URI,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  () => console.log(" Mongoose is connected"));
 
 // Start the API server
 app.listen(PORT, function() {
