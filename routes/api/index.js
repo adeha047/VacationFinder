@@ -13,4 +13,6 @@ router.use("/flights", flightRoutes);
 
 router.use("/interests", interestRoutes);
 
+router.use("/locations", interestRoutes);
+
 module.exports = router;

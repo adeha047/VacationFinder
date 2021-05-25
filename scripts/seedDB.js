@@ -71,7 +71,7 @@ db.Interest.insertMany(interestSeed, (err, docs) => {
   //     interest_id: 2
   //   },
   //   {
-  //     location: "Brussles, Belgium",
+  //     location: "Brussels, Belgium",
   //     interest_id: 2
   //   },
   //   {

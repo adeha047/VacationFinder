@@ -4,7 +4,7 @@ function Questionaire() {
     const [interests, setInterests] = useState([]);
     useEffect(() => {
         async function fetchInterests() {
-            const request = await fetch("http://localhost:3001/api/interests", {
+            const request = await fetch("http://localhost:3001/api/locations", {
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json',
@@ -37,4 +37,4 @@ function Questionaire() {
         </>
     )
 }
-export default Questionaire;
+export default Location;
