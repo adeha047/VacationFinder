@@ -11,7 +11,7 @@ function Location() {
     console.log(interestID)
     useEffect(() => {
         async function fetchLocations() {
-            const request = await fetch("http://localhost:3001/api/locations", {
+            const request = await fetch("./api/locations", {
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json',

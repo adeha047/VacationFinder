@@ -6,7 +6,6 @@ const locationSchema = new Schema({
     interestID: { type: String, required: true }
 });
 
-
 const Location = mongoose.model("Location", locationSchema);
 
 module.exports = Location;
