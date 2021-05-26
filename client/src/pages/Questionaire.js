@@ -8,7 +8,7 @@ function Questionaire() {
     }
     useEffect(() => {
         async function fetchInterests() {
-            const request = await fetch("http://localhost:3001/api/interests", {
+            const request = await fetch("./api/interests", {
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json',
