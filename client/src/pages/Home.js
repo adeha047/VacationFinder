@@ -5,7 +5,7 @@ import Animation from "../images/fun.gif";
 function Home() {
     return (
         <>
-          <div class = "home">
+          <div className = "home">
             <ReactTypingEffect
                 text="Hey Everyone!, Come Join Us On Our Adventure 
                 To Find The Perfect Vacation With Us" 

@@ -1,9 +1,10 @@
-import React, {useState, Fragment, useContext} from "react";
-
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../../utils/UserContext";
 import './nav.css';
 
 function Nav() {
+  const {loggedIn} = useContext(UserContext);
   return (
     
     <nav>
@@ -13,8 +14,13 @@ function Nav() {
       <ul className="navlinks">
           <li><Link to = {"/home"}>HOME</Link></li>
           <li><Link to = {"/about"}>ABOUT</Link></li>
-          <li><Link to = {"/login"}>ACCOUNT</Link></li>
           <li><Link to = {"/questionaire"}>QUESTIONAIRE</Link></li>
+          <li><Link to = {"/signup"}>SIGN-UP</Link></li>
+          {loggedIn ?
+            <li><Link to= {"/logout"}>LOGOUT</Link></li>
+            :
+            <li><Link to = {"/login"}>LOGIN</Link></li>
+          }
         </ul>
     </nav>
   );
