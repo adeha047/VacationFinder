@@ -1,9 +1,7 @@
 import React, {useState, Fragment, useContext} from "react";
 
 import { Link } from "react-router-dom";
-import UserContext from "../../utils/UserContext";
-import LoginForm from "../LoginForm";
-import './style.scss';
+import './nav.css';
 
 function Nav() {
   return (
@@ -15,8 +13,8 @@ function Nav() {
       <ul className="navlinks">
           <li><Link to = {"/home"}>HOME</Link></li>
           <li><Link to = {"/about"}>ABOUT</Link></li>
-          <li className = "link"><a href='#'>ACCOUNT</a></li>
-          <li className = "link"><a href='#'>QUESTIONAIRE</a></li>
+          <li><Link to = {"/login"}>ACCOUNT</Link></li>
+          <li><Link to = {"/questionaire"}>QUESTIONAIRE</Link></li>
         </ul>
     </nav>
   );

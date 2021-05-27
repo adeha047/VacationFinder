@@ -13,17 +13,135 @@ body{
 
 h2{
   text-align: center;
+  margin-bottom:1em;
+  margin-top:1em;
 }
 
 /* home page */
 img{
   display:block;
   margin:0 auto;
-  width: 30%;
+  width: 45%;
 }
 
 /* type wrting */
+/* em for spacing, rem for font size */
 .home{
   text-align: center;
-  font-size: 25px;
+  font-size: 3rem;
+  color:#D4F4FF;
+  font-weight:bold;
+  margin-top:1em;
+  margin-bottom:1em;
+  text-shadow:2px 2px 2px #000;
 }
+
+/* login page */
+.success{
+  text-align: center;
+  margin-bottom:1em;
+  font-size: 1.5rem;
+}
+span{
+  text-align: center;
+}
+/* text label color */
+.form-label{
+  margin-top: 15px;
+  color:#667E96;
+  font-weight:bold;
+  font-size:1.5rem;
+}
+
+.form-container{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:400px;
+  height: auto;
+  background-color:#D4F4FF;
+  border-radius: 5px;
+  text-align: center;
+}
+
+button{
+  /* margin: 0 auto;
+  display: block; */
+  font-size:1.3rem;
+  padding:10px;
+  border-radius: 10px;
+  margin-top:20px;
+  margin:20px;
+}
+
+button:hover{
+  background-color:#667E96;
+}
+
+
+
+/* about page */
+h2{
+  text-align: center;
+  margin-top:40px;
+  font-size: 3rem;
+  color:#D4F4FF;
+}
+
+/* About Card CSS */
+.Card{
+  width:45%;
+  height:auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 1p 10px 1px black;
+  margin:0 auto;
+  background:#9ABEE3;
+}
+
+p{
+  font-size: 25px;
+  text-align: center;
+  color:#393F54;
+  font-weight:bold;
+}
+
+/* Questionaire */
+.Interest{
+  background: #93D9C4;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  height: auto;
+  opacity: 90%;
+  border-radius: 15px;
+  box-shadow: 0px 1p 10px 1px black;
+}
+
+.question,
+.ask{
+  color: #2F3445;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align:center;
+  list-style-type: none;
+}
+
+h3{
+  text-align: center;
+  font-weight: bold;
+}
+
+/* location.js */
+.place,
+.airport{
+  font-size: 3rem;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* plane icons */
+svg{
+  height:20px;
+  width:40px;
+}
+
