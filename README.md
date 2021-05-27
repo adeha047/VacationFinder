@@ -16,7 +16,7 @@ From there, the user will have different options to pick and the app will tell t
 - [Tech Used](#tech)
 
 # Screenshot <a name = "screenshot"></a>
-![](client/images/homepage.PNG)
+![](client/src/images/homepage.PNG)
 
 # Deployment <a name = "deployment"></a>
 https://github.com/jhohing/VacationFinder
