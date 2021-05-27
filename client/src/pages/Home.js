@@ -9,6 +9,7 @@ function Home() {
         <>
             <div class="home">
                 <Typewriter
+                // delays and looping
                 options = {{
                     loop:true,
                     delay: 100
