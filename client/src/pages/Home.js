@@ -1,18 +1,17 @@
 import React from 'react';
 import ReactTypingEffect from 'react-typing-effect';
-import Animation from "../images/fun.gif";
+import bunny from "../images/bunny.gif";
 
 function Home() {
     return (
         <>
-          <div class = "home">
+          <div className = "home">
             <ReactTypingEffect
                 text="Hey Everyone!, Come Join Us On Our Adventure 
                 To Find The Perfect Vacation With Us" 
             />
            </div> 
-            <img src={Animation} alt="animation" />
-
+            <img src={bunny} alt="bunny" />
         </>
     )
 }

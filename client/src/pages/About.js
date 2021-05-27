@@ -1,4 +1,5 @@
 import React from 'react';
+import Animation from "../images/fun.gif";
 
 function About() {
     return (
@@ -21,6 +22,7 @@ function About() {
 
                     Open your wings and experience the globe.
                 </p>
+                <img src={Animation} alt="animation" />
             </div>
         </>
     )

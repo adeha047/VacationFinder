@@ -5,11 +5,12 @@ import UserContext from '../utils/UserContext';
 
 function SignUp(props){
     const {loggedIn} = useContext(UserContext);
+    console.log(loggedIn);
     return (
         <div className="container">
             {loggedIn && <Redirect to="/" />}
-            <h1>SignUp</h1>
-            <SignUpForm className="full-page-signup" />
+            <h2>Please Register For Your Account</h2>
+            <SignUpForm  />
         </div>
     )
 }
