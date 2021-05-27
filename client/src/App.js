@@ -13,26 +13,37 @@ import Logout from "./pages/Logout";
 
 
 function App() {
+  const [email, setEmail] = useState("");
+  const [loggedIn, setLoggedIn] = useState(false);
+  console.log(loggedIn);
   return (
     <Router>
-      <Nav />
-      <Switch>
-        <Route exact path={["/", "/home"]}>
-          <Home />
-        </Route>
-        <Route exact path="/about">
-          <About />
-        </Route>
-        <Route exact path="/login">
-          <Login/>
-        </Route>
-        <Route exact path="/questionaire">
-          <Questionaire/>
-        </Route>
-        <Route exact path="/locations">
-          <Location/>
-        </Route>
-      </Switch>
+      <UserContext.Provider value={{email, setEmail, loggedIn, setLoggedIn}}>
+        <Nav />
+        <Switch>
+          <Route exact path={["/", "/home"]}>
+            <Home />
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/login">
+            <Login/>
+          </Route>
+          <Route exact path="/questionaire">
+            <Questionaire/>
+          </Route>
+          <Route exact path="/signup">
+            <SignUp />
+          </Route>
+          <Route exact path="/logout">
+            <Logout />
+          </Route>
+          <Route exact path="/locations">
+            <Location/>
+          </Route>
+        </Switch>
+      </UserContext.Provider>
     </Router>
   )
 }

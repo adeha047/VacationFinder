@@ -1,8 +1,7 @@
 import React, { Fragment, useContext, useRef } from 'react';
-import "./style.scss";
-import API from '../../utils/API';
+import API from "../../utils/API";
+import { useHistory } from 'react-router-dom';
 import UserContext from '../../utils/UserContext';
-import { useHistory } from "react-router-dom";
 
 function LoginForm(props) {
     const { email, setEmail, loggedIn, setLoggedIn } = useContext(UserContext);
@@ -14,14 +13,13 @@ function LoginForm(props) {
         extraProps.className = props.className;
     }
     let emailId = props.className ? props.className + "-login-email" : "login-email";
-    let emailHelpId = props.className ? props.className + "-login-email-help" : "login-email-help";
     let passwordId = props.className ? props.className + "-login-password" : "login-password";
     const handleSubmit = event => {
         // if the user hits enter or hits the button, this function will fire
         event.preventDefault();
         // console.log("submit happened");
         // console.log({ email: emailInput.current.value, password: passwordInput.current.value});
-        API.login({ email: emailInput.current.value, password: passwordInput.current.value})
+        API.login({ email: emailInput.current.value, password: passwordInput.current.value })
             .then(data => {
                 // console.log(data);
                 setEmail(data.data.email);
@@ -32,31 +30,51 @@ function LoginForm(props) {
                 console.log(err);
             });
     }
+
     return (
         <Fragment>
-            { (() => {
-                if (!loggedIn) {
-                    return (<form {...extraProps} onSubmit={handleSubmit}>
-                        <div className="form-group">
-                            <label htmlFor={emailId}>Email address</label>
-                            <input ref={emailInput} type="email" className="form-control" id={emailId} aria-describedby={emailHelpId} />
-                            <small id={emailHelpId} className="email-help-text form-text text-muted">We'll never share your email with anyone else.</small>
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor={passwordId}>Password</label>
-                            <input ref={passwordInput} type="password" className="form-control" id={passwordId} />
-                        </div>
-                        <button type="submit" className="btn btn-primary">Login</button>
-                    </form>
-                    );
+            {!loggedIn ?
+                    <div className="form-container">
+                        <form className="register-form" {...extraProps} onSubmit={handleSubmit}>
+                            
+                            {/* Email */}
+                            <div className='form-inputs'>
+                                <label htmlFor={emailId}
+                                    className='form-label'>
+                                    Email:
+                                </label>
+                                <input
+                                    className="form-field"
+                                    ref={emailInput}
+                                    type="email"
+                                    id={emailId}
+                                />
+                            </div>
+                            
+                            {/* Password */}
+                            <div className='form-inputs'>
+                                <label htmlFor={passwordId}
+                                    className='form-label'>
+                                    Password:
+                                </label>
+                                <input
+                                    ref={passwordInput}
+                                    type="password"
+                                    className="form-field"
+                                    id={passwordId}
+                                />
+                            </div>
+                            
+                            <button
+                                className="form-field"
+                                type="submit">Submit
+                            </button>
+                        </form>
+                    </div>
+                :
+                    <h3>{email}</h3>
                 }
-                else {
-                    return <h3>{email}</h3>;
-                }
-            })()
-            }
         </Fragment>
     )
 }
-
 export default LoginForm;
