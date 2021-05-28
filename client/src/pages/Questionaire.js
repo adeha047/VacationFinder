@@ -31,8 +31,8 @@ function Questionaire() {
     return (
         <>
             <h2>Select Your Interest</h2>
-            <div class = "Interest">
-            <ul class = "question">
+            <div className = "interest-2">
+            <ul className = "question">
                 {interests.map((i) => (
                     <li key={i.interestID}>
                         {i.interest}

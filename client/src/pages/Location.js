@@ -56,7 +56,7 @@ function Location() {
         return (
             <>
                 <h2>Select Your City</h2>
-                <div className = "Interest">
+                <div className = "interest-2">
                 <ul className = "ask">
                     {locations.map((i) => (
                         <li key={i._id}>
